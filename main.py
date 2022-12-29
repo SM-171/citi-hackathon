@@ -23,7 +23,7 @@ def get_date():
     dd = today[2]
     mm = months[today[1]]
     yy = today[0]
-    
+
     return dd + " " + mm + ", " + yy
 
 def filter_todays_headlines(headlines):
@@ -59,13 +59,13 @@ def get_news():
     todays_headlines = filter_todays_headlines(extract_headlines(news))
     # print(todays_headlines)
 
-    st.subheader('Latest NSE News')
+    st.header('NSE Highlights')
     st.caption('Date: ' + get_date())
 
     i = 1
     for headline in todays_headlines:
-        st.markdown(str(i) + ") " + headline + ".")
-        st.markdown("[[Article Link]](todays_headlines[headline]['link'])  |  Author: " + todays_headlines[headline]['author_name'])
+        st.markdown(str(i) + ") " + headline + ".\n")
+        st.markdown("🔗" + "[[Article Link]]({}))".format(todays_headlines[headline]['link']) + "  |  Author : " + todays_headlines[headline]['author_name'])
         i += 1
 
 get_news()
