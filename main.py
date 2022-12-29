@@ -3,7 +3,8 @@ import urllib.request, sys, time
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from datetime import date
+from datetime import date, timedelta
+from prettytable import PrettyTable
 
 months = {"01":"January",
           "02":"February",
@@ -27,7 +28,8 @@ def get_date():
     return dd + " " + mm + ", " + yy
 
 def filter_todays_headlines(headlines):
-    return {key:value for (key, value) in headlines.items() if value['date'] == str(date.today())}
+    today = date.today()
+    return {key:value for (key, value) in headlines.items() if value['date'] == str(today) or value['date'] == str(today - timedelta(days = 1)) }
 
 def extract_headlines(news):
     headlines = {}
@@ -67,5 +69,56 @@ def get_news():
         st.markdown(str(i) + ") " + headline + ".\n")
         st.markdown("🔗" + "[[Article Link]]({}))".format(todays_headlines[headline]['link']) + "  |  Author : " + todays_headlines[headline]['author_name'])
         i += 1
+    
+    st.markdown("---")
+    get_trends()
+
+def find_trending_words():
+    url = "https://economictimes.indiatimes.com/marketstats/pid-40,exchange-nse,sortby-value,sortorder-desc.cms"
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, "html.parser")
+
+    trending = soup.find('div', attrs={'class':'seoWidget_con'})
+    trending_market = trending.find_all('a')
+
+    trending_words = []
+    for trends in trending_market:
+        trending_words.append(trends.text) 
+        # = "https://economictimes.indiatimes.com"+trends['href']
+
+    return trending_words
+
+def get_trends():
+    st.subheader("Trending in Market")
+    words = find_trending_words()
+
+    col1, col2, col3, col4  = st.columns(4)
+
+    i = 0
+    while i < len(words):
+        with col1:
+            st.button(words[i])
+            i += 1
+
+        if(i == len(words)):
+            break
+
+        with col2:
+            st.button(words[i])
+            i += 1
+        
+        if(i == len(words)):
+            break
+    
+        with col3:
+            st.button(words[i])
+            i += 1
+        
+        if(i == len(words)):
+            break
+        
+        with col4:
+            st.button(words[i])
+            i += 1
 
 get_news()
