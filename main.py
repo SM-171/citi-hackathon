@@ -38,6 +38,7 @@ def extract_headlines(news):
         if headline != "":
             headlines[headline] = {}
             headlines[headline]['link'] = "https://www.business-standard.com"+str(article.find('a')['href'].strip())
+            # print(headline)
     
     for headline in headlines:
         # print(headlines[headline]['link'])
@@ -45,8 +46,14 @@ def extract_headlines(news):
         article_text = BeautifulSoup(article_page.text, "html.parser")
         
         author_info = article_text.find('p', attrs={'class':'authorTxt'})
-        headlines[headline]["author_name"] = str(author_info.find('a').text.strip())
-        headlines[headline]["date"] = author_info.find('span', attrs = {'itemprop':'datePublished'})['content']
+        # print(author_info)
+        if(author_info != None):
+            headlines[headline]["author_name"] = str(author_info.find('a').text.strip())
+            headlines[headline]["date"] = author_info.find('span', attrs = {'itemprop':'datePublished'})['content']
+        else:
+            # print(headlines[headline]['link'])
+            headlines[headline]["author_name"] = "Anonymous Source"
+            headlines[headline]["date"] = str(date.today())
 
     return headlines
 
@@ -121,4 +128,6 @@ def get_trends():
             st.button(words[i])
             i += 1
 
+st.markdown('<div style="text-align: center; font-size: 3rem; font-weight: bolder; ">Market Commentary</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: center; font-size: 1rem; text-decoration: underline;">Intended for Institutional Clients Only</div>', unsafe_allow_html=True)
 get_news()
