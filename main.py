@@ -27,6 +27,8 @@ def get_date():
 
     return dd + " " + mm + ", " + yy
 
+
+
 def filter_todays_headlines(headlines):
     today = date.today()
     return {key:value for (key, value) in headlines.items() if value['date'] == str(today) or value['date'] == str(today - timedelta(days = 1)) }
@@ -127,7 +129,28 @@ def get_trends():
         with col4:
             st.button(words[i])
             i += 1
+def get_top_surfers():
+    #top 5 gainers
+    st.header("Top Gainers for NSE")
+    df = pd.read_html("https://www.way2wealth.com/market/indicestopgainers/")
+    st.table(df[123].head(5))
+
+    #top 5 losers
+    st.header("Top Losers for NSE")
+    df = pd.read_html("https://www.way2wealth.com/market/indicestoplosers/")
+    st.table(df[123].head(5))
+   
+def get_market_turnover():
+    #print market turnover
+    df = pd.read_html("https://www.way2wealth.com/market/volumeturnover/")
+    df= df[123].head(1)
+    df.drop(['Date'], axis=1, inplace= True)
+    st.header("Market Turnover")
+    st.table(df)
+
 
 st.markdown('<div style="text-align: center; font-size: 3rem; font-weight: bolder; ">Market Commentary</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: center; font-size: 1rem; text-decoration: underline;">Intended for Institutional Clients Only</div>', unsafe_allow_html=True)
 get_news()
+get_top_surfers()
+get_market_turnover()
