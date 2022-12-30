@@ -15,3 +15,6 @@ System should have following functionalities:
 #### This project is made using [streamlit](https://streamlit.io/).
 <br/>To run the project, type the following command on the command line:
 ```streamlit run main.py```
+
+##Features in our project
+![image](https://user-images.githubusercontent.com/78756272/210085875-6f5fbbaf-3dfa-4dbb-b077-6a7b009dc26e.png)
