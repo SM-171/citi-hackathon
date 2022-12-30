@@ -16,5 +16,17 @@ System should have following functionalities:
 <br/>To run the project, type the following command on the command line:
 ```streamlit run main.py```
 
-##Features in our project
+## Features in our project
+
+### 1) Market Commentary
+Provides the top highlight and news of the day of NSE 200 and shows what is trending in the market.
 ![image](https://user-images.githubusercontent.com/78756272/210085875-6f5fbbaf-3dfa-4dbb-b077-6a7b009dc26e.png)
+
+### 2) Top surfers for NSE
+Displays the top gainers and top losers for NSE.
+![image](https://user-images.githubusercontent.com/78756272/210086426-b2715b79-1911-4b3e-ba98-0dfc6dbcfc11.png)
+
+### 3) Market Turnover 
+Displays the index reporting of Market turnover of the previous day.
+![image](https://user-images.githubusercontent.com/78756272/210086572-cb350717-8bd1-43e3-ab23-422d8b29a866.png)
+
