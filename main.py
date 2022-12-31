@@ -158,6 +158,13 @@ def get_market_turnover():
     st.caption("NOTE: All trade values are in INR(Indian Rupees)")
     st.markdown("---")
 
+def get_adr_gdr_prices():
+    st.subheader("ADR GDR Prices")
+    df = pd.read_html("https://www.way2wealth.com/market/adrgdr/", match="Volume")
+    #df[0].drop(['Exchange Group'], axis=1, inplace=True)
+    st.table(df[0].head(5))
+    st.caption("NOTE: All trade values are in INR(Indian Rupees)")
+    st.markdown("---")
 
 def main():
     st.markdown('<div style="text-align: center; font-size: 3rem; font-weight: bolder; ">Market Commentary</div>', unsafe_allow_html=True)
@@ -168,7 +175,9 @@ def main():
     get_news()
     get_top_surfers()
     get_market_turnover()
+    get_adr_gdr_prices()
     get_trends()
+
 
 if __name__ == "__main__":
     main()
