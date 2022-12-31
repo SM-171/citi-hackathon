@@ -30,6 +30,7 @@ Displays the top gainers and top losers for NSE.
 
 ### 3) Market Turnover 
 Displays the index reporting of Market turnover of the previous day.
-![image](https://user-images.githubusercontent.com/78756272/210130270-b57dad24-35a9-444f-9cf8-7c6adaadb71c.png)
+![image](https://user-images.githubusercontent.com/78756272/210130360-3a84c492-f42f-48cb-87a4-81eb9edeb7e9.png)
+
 
 
