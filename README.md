@@ -39,8 +39,10 @@ Displays the current day's ADR and GDR prices.
 Displays what is currently trending in the market.
 ![image](https://user-images.githubusercontent.com/78756272/210132225-e57a5ceb-d92a-4ade-ad7c-7e5b555a8a0f.png)
 
-
-
+#### Team Details
+Team Name : Group P
+Members: Shreya Mittal
+         Kamini Singh
 
 
 
