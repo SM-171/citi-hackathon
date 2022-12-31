@@ -24,9 +24,11 @@ Provides the top highlight and news of the day of NSE 200 and shows what is tren
 
 ### 2) Top surfers for NSE
 Displays the top gainers and top losers for NSE.
-![image](https://user-images.githubusercontent.com/78756272/210086426-b2715b79-1911-4b3e-ba98-0dfc6dbcfc11.png)
+![image](https://user-images.githubusercontent.com/78756272/210130286-dad441ca-e0c2-4256-a62d-1e449f85b171.png)
+![image](https://user-images.githubusercontent.com/78756272/210130297-cf93d398-7c44-4ad5-82d8-ec778b4ca319.png)
 
 ### 3) Market Turnover 
 Displays the index reporting of Market turnover of the previous day.
-![image](https://user-images.githubusercontent.com/78756272/210086572-cb350717-8bd1-43e3-ab23-422d8b29a866.png)
+![image](https://user-images.githubusercontent.com/78756272/210130270-b57dad24-35a9-444f-9cf8-7c6adaadb71c.png)
+
 
