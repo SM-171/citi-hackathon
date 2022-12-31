@@ -19,18 +19,29 @@ System should have following functionalities:
 ## Features in our project
 
 ### 1) Market Commentary
-Provides the top highlight and news of the day of NSE 200 and shows what is trending in the market.
-![image](https://user-images.githubusercontent.com/78756272/210085875-6f5fbbaf-3dfa-4dbb-b077-6a7b009dc26e.png)
+Provides the top highlight and news of the day of NSE 200.
+![image](https://user-images.githubusercontent.com/78756272/210132300-aaa55c2f-b99c-4d18-98fe-775f0b4a7c77.png)
 
 ### 2) Top surfers for NSE
 Displays the top gainers and top losers for NSE.
-![image](https://user-images.githubusercontent.com/78756272/210130319-53ee91a6-a709-4a0e-b29a-df92150531ee.png)
-![image](https://user-images.githubusercontent.com/78756272/210130327-09b50d4e-45e8-44da-b5ae-684ed4c17477.png)
-
+![image](https://user-images.githubusercontent.com/78756272/210132309-4da03bd7-635d-430e-80c3-b45058ca4a9b.png)
+![image](https://user-images.githubusercontent.com/78756272/210132318-23d63ad6-181a-4a2a-b336-ba82c6dcc23a.png)
 
 ### 3) Market Turnover 
 Displays the index reporting of Market turnover of the previous day.
-![image](https://user-images.githubusercontent.com/78756272/210130360-3a84c492-f42f-48cb-87a4-81eb9edeb7e9.png)
+![image](https://user-images.githubusercontent.com/78756272/210132324-337e4c5a-988d-42a8-98a9-fb085a4cc0c0.png)
+
+### 4) ADR GDR Prices  
+Displays the current day's ADR and GDR prices.
+![image](https://user-images.githubusercontent.com/78756272/210132332-32845991-acf9-48a9-a69c-f660f1860295.png)
+
+### 5) Trending Keywords
+Displays what is currently trending in the market.
+![image](https://user-images.githubusercontent.com/78756272/210132225-e57a5ceb-d92a-4ade-ad7c-7e5b555a8a0f.png)
+
+
+
+
 
 
 
