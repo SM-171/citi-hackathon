@@ -42,8 +42,7 @@ Displays what is currently trending in the market.
 ### Team Details
 Team Name : Group P
 
-Members: Shreya Mittal
-         Kamini Singh
+Members: Shreya Mittal and Kamini Singh
 
 
 
